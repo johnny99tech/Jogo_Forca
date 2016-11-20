@@ -1,0 +1,9 @@
+Objetivos:
+-Melhorar a coesão do código fonte.
+
+-Aplicar o princípio da separação modelo-visão.(+-)
+
+-No fim de jogo, acrescentar uma opção para jogar ou 
+não uma nova partida.(ok)
+-Vincular cada a palavra a uma dica que deve ser exibida 
+para o jogador (e.g., é uma fruta, é um lugar).(ok)
