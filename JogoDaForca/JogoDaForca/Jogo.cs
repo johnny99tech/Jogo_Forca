@@ -126,15 +126,16 @@ namespace JogoDaForca
         {
             JogoClass.tentativasRestantes = 6;
             JogoClass.fimDeJogo = false;
+            //FUNCIONA MAIS DA ERRO
             Jogo();
         }
         #endregion
 
+        //      ERRO
         //private void Click(object sender, EventArgs e)
         //{
         //    char letra;
         //    letra = Convert.ToChar((Button)sender);
-        //    Button.
         //    processarLetra(letra);
         //    ((Button)sender).Enabled = false;
         //}
