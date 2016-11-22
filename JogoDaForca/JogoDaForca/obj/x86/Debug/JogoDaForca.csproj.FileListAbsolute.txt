@@ -13,3 +13,11 @@ C:\Users\Jonathan Cardoso\Documents\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDa
 C:\Users\Jonathan Cardoso\Documents\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.Properties.Resources.resources
 C:\Users\Jonathan Cardoso\Documents\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.csproj.GenerateResource.Cache
 C:\Users\Jonathan Cardoso\Documents\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.Jogo.resources
+C:\Users\Jonathan Cardoso\Documents\GitHub\Jogo_Forca\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.exe
+C:\Users\Jonathan Cardoso\Documents\GitHub\Jogo_Forca\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.pdb
+C:\Users\Jonathan Cardoso\Documents\GitHub\Jogo_Forca\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.csprojResolveAssemblyReference.cache
+C:\Users\Jonathan Cardoso\Documents\GitHub\Jogo_Forca\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.Jogo.resources
+C:\Users\Jonathan Cardoso\Documents\GitHub\Jogo_Forca\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.Properties.Resources.resources
+C:\Users\Jonathan Cardoso\Documents\GitHub\Jogo_Forca\JogoDaForca\JogoDaForca\obj\x86\Debug\JogoDaForca.csproj.GenerateResource.Cache
+C:\Users\Jonathan Cardoso\Documents\GitHub\Jogo_Forca\JogoDaForca\JogoDaForca\bin\Debug\JogoDaForca.exe
+C:\Users\Jonathan Cardoso\Documents\GitHub\Jogo_Forca\JogoDaForca\JogoDaForca\bin\Debug\JogoDaForca.pdb

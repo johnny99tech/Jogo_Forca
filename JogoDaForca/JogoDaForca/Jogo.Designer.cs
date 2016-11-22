@@ -347,7 +347,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(468, 12);
+            this.label2.Location = new System.Drawing.Point(497, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 29);
             this.label2.TabIndex = 29;
@@ -357,7 +357,7 @@
             // 
             this.Dica.AutoSize = true;
             this.Dica.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dica.Location = new System.Drawing.Point(541, 12);
+            this.Dica.Location = new System.Drawing.Point(570, 12);
             this.Dica.Name = "Dica";
             this.Dica.Size = new System.Drawing.Size(0, 29);
             this.Dica.TabIndex = 30;
@@ -391,7 +391,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // Jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -429,7 +429,7 @@
             this.Controls.Add(this.B);
             this.Controls.Add(this.A);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "Jogo";
             this.Text = "Jogo da Forca";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

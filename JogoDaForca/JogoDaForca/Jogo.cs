@@ -14,25 +14,26 @@ namespace JogoDaForca
         public Jogo()
         {
             InitializeComponent();
-           
-            Random rand = new Random();
-            
-            JogoClass.palavraSorteada = JogoClass.bancoDePalavras[ rand.Next(0, JogoClass.bancoDePalavras.Length) ];
-            //palavraSorteada = bancoDePalavras[ rand.Next(0, bancoDePalavras.Length) ];
-            string impressao = "";
-            JogoClass.palavraManipulada = new char[JogoClass.bancoDePalavras.Length];
-            for (int i = 0; i < JogoClass.palavraSorteada.Length; i++)
-            {
-                impressao += "_ ";
-                JogoClass.palavraManipulada[i] = '_';
-            }
-            Tela.Text = impressao;
-            if (JogoClass.debugOn)
-                //label1 -> não encontrei
-                label1.Text = JogoClass.palavraSorteada;
-            //Butons escondidos
-            JogarNovidade.Hide();
-            Sair.Hide();
+            Começo();
+
+            //Random rand = new Random();
+
+            //JogoClass.palavraSorteada = JogoClass.bancoDePalavras[rand.Next(0, JogoClass.bancoDePalavras.Length)];
+            ////palavraSorteada = bancoDePalavras[ rand.Next(0, bancoDePalavras.Length) ];
+            //string impressao = "";
+            //JogoClass.palavraManipulada = new char[JogoClass.bancoDePalavras.Length];
+            //for (int i = 0; i < JogoClass.palavraSorteada.Length; i++)
+            //{
+            //    impressao += "_ ";
+            //    JogoClass.palavraManipulada[i] = '_';
+            //}
+            //Tela.Text = impressao;
+            //if (JogoClass.debugOn)
+            //    //label1 -> não encontrei
+            //    label1.Text = JogoClass.palavraSorteada;
+            ////Butons escondidos
+            //JogarNovidade.Hide();
+            //Sair.Hide();
 
             #region "palavraSorteada"
           //  Dica -> palavraSorteada
@@ -66,7 +67,29 @@ namespace JogoDaForca
                 Dica.Text = "Comida";
             }
             #endregion
-        } 
+        }
+        public static void Começo()
+        {
+            Jogo Forca = new Jogo();
+
+            Random rand = new Random();
+            JogoClass.palavraSorteada = JogoClass.bancoDePalavras[rand.Next(0, JogoClass.bancoDePalavras.Length)];
+            //palavraSorteada = bancoDePalavras[ rand.Next(0, bancoDePalavras.Length) ];
+            string impressao = "";
+            JogoClass.palavraManipulada = new char[JogoClass.bancoDePalavras.Length];
+            for (int i = 0; i < JogoClass.palavraSorteada.Length; i++)
+            {
+                impressao += "_ ";
+                JogoClass.palavraManipulada[i] = '_';
+            }
+            Forca.Tela.Text = impressao;
+            if (JogoClass.debugOn)
+                //label1 -> não encontrei
+                Forca.label1.Text = JogoClass.palavraSorteada;
+            //Butons escondidos
+            Forca.JogarNovidade.Hide();
+            Forca.Sair.Hide();
+        }
 
         private void processarLetra(char letra)
         {
@@ -135,14 +158,22 @@ namespace JogoDaForca
             Jogo Jogo = new Jogo();
             this.Hide();
             Jogo.Show();
-
         }
         #endregion
+
+        //private void Click(object sender, EventArgs e)
+        //{
+        //    char letra;
+        //    letra = Convert.ToChar((Button)sender);
+        //    Button.
+        //    processarLetra(letra);
+        //    ((Button)sender).Enabled = false;
+        //}
 
         #region "Buttons Click"
         private void A_Click(object sender, EventArgs e)
         {
-            processarLetra('A'); 
+            processarLetra('A');
             ((Button)sender).Enabled = false;
         }
 
