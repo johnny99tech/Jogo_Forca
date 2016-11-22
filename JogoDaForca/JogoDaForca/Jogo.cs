@@ -16,65 +16,38 @@ namespace JogoDaForca
             InitializeComponent();
             Começo();
 
-            //Random rand = new Random();
-
-            //JogoClass.palavraSorteada = JogoClass.bancoDePalavras[rand.Next(0, JogoClass.bancoDePalavras.Length)];
-            ////palavraSorteada = bancoDePalavras[ rand.Next(0, bancoDePalavras.Length) ];
-            //string impressao = "";
-            //JogoClass.palavraManipulada = new char[JogoClass.bancoDePalavras.Length];
-            //for (int i = 0; i < JogoClass.palavraSorteada.Length; i++)
-            //{
-            //    impressao += "_ ";
-            //    JogoClass.palavraManipulada[i] = '_';
-            //}
-            //Tela.Text = impressao;
-            //if (JogoClass.debugOn)
-            //    //label1 -> não encontrei
-            //    label1.Text = JogoClass.palavraSorteada;
-            ////Butons escondidos
-            //JogarNovidade.Hide();
-            //Sair.Hide();
+            JogarNovidade.Hide();
+            Sair.Hide();
 
             #region "palavraSorteada"
           //  Dica -> palavraSorteada
-            if (JogoClass.palavraSorteada == "BANANA" || JogoClass.palavraSorteada == "CAJÚ")
-            {
+            if (JogoClass.palavraSorteada == "BANANA" || JogoClass.palavraSorteada == "CAJÚ"){
                 Dica.Text = "Fruta"; }
-            else if (JogoClass.palavraSorteada == "SELVA")
-            {
+            else if (JogoClass.palavraSorteada == "SELVA"){
                 Dica.Text = "Reino Animal"; }
-            else if (JogoClass.palavraSorteada == "ARARAQUARA")
-            {
+            else if (JogoClass.palavraSorteada == "ARARAQUARA"){
                 Dica.Text = "Cidade"; }
-            else if (JogoClass.palavraSorteada == "VOLKSWAGEN" || JogoClass.palavraSorteada == "HYUNDAI")
-            {
+            else if (JogoClass.palavraSorteada == "VOLKSWAGEN" || JogoClass.palavraSorteada == "HYUNDAI"){
                 Dica.Text = "Marca De Carros"; }
-            else if (JogoClass.palavraSorteada == "DONINHA" || JogoClass.palavraSorteada == "PAPAGAIO")
-            {
+            else if (JogoClass.palavraSorteada == "DONINHA" || JogoClass.palavraSorteada == "PAPAGAIO"){
                 Dica.Text = "Animais"; }
-            else if (JogoClass.palavraSorteada == "BRASIL")
-            {
+            else if (JogoClass.palavraSorteada == "BRASIL"){
                 Dica.Text = "País"; }
-            else if (JogoClass.palavraSorteada == "SKATE")
-            {
+            else if (JogoClass.palavraSorteada == "SKATE"){
                 Dica.Text = "Objeto"; }
-            else if (JogoClass.palavraSorteada == "PETRÓLEO")
-            {
+            else if (JogoClass.palavraSorteada == "PETRÓLEO"){
                 Dica.Text = "Matéria Orgânica";
             }
-            else if (JogoClass.palavraSorteada == "PIPOCA")
-            {
+            else if (JogoClass.palavraSorteada == "PIPOCA"){
                 Dica.Text = "Comida";
             }
             #endregion
         }
+
         public static void Começo()
         {
-            Jogo Forca = new Jogo();
-
             Random rand = new Random();
             JogoClass.palavraSorteada = JogoClass.bancoDePalavras[rand.Next(0, JogoClass.bancoDePalavras.Length)];
-            //palavraSorteada = bancoDePalavras[ rand.Next(0, bancoDePalavras.Length) ];
             string impressao = "";
             JogoClass.palavraManipulada = new char[JogoClass.bancoDePalavras.Length];
             for (int i = 0; i < JogoClass.palavraSorteada.Length; i++)
@@ -82,13 +55,13 @@ namespace JogoDaForca
                 impressao += "_ ";
                 JogoClass.palavraManipulada[i] = '_';
             }
-            Forca.Tela.Text = impressao;
+            Jogo jogo = new Jogo();
+            jogo.Tela.Text = impressao;
             if (JogoClass.debugOn)
-                //label1 -> não encontrei
-                Forca.label1.Text = JogoClass.palavraSorteada;
+                jogo.label1.Text = JogoClass.palavraSorteada;
             //Butons escondidos
-            Forca.JogarNovidade.Hide();
-            Forca.Sair.Hide();
+            jogo.JogarNovidade.Hide();
+            jogo.Sair.Hide();
         }
 
         private void processarLetra(char letra)
@@ -129,7 +102,6 @@ namespace JogoDaForca
                         pictureBox1.Image = JogoDaForca.Properties.Resources.imagem07;
                         JogoClass.fimDeJogo = true;
                         MessageBox.Show("Fim de Jogo. Você perdeu!!");
-                       //Aparecer os botoês
                         JogarNovidade.Show();
                         Sair.Show();
                     }
@@ -138,7 +110,6 @@ namespace JogoDaForca
                 {
                     JogoClass.fimDeJogo = true;
                     MessageBox.Show("Fim de Jogo. Você ganhou, PARABÉNS!!");
-                    //Aparecer os botoês
                     JogarNovidade.Show();
                     Sair.Show();
                 }
@@ -148,16 +119,14 @@ namespace JogoDaForca
         #region"sair e Jogar"
         private void Sair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void JogarNovidade_Click(object sender, EventArgs e)
         {
             JogoClass.tentativasRestantes = 6;
             JogoClass.fimDeJogo = false;
-            Jogo Jogo = new Jogo();
-            this.Hide();
-            Jogo.Show();
+            Jogo();
         }
         #endregion
 
